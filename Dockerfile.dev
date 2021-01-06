@@ -1,0 +1,11 @@
+FROM node:alpine
+
+WORKDIR '/app'
+
+COPY package.json .
+RUN npm install
+
+# keep this because maybe one day you will no longer use docker-compose
+COPY . .
+
+CMD ["npm", "run", "start"]
