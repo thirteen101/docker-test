@@ -12,7 +12,7 @@ script:
   - docker run -e CI=true thirteen/docker-react npm run test
 
 deploy:
-  provider: elasticbenstalk
+  provider: elasticbeanstalk
   region: "ap-southeast-1"
   app: "docker-test"
   env: "DockerTest-env"
